@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from '@ftm1337/sdk15'
+import { Currency, CurrencyAmount, Fraction, Percent } from '@ftm1337/abcdefx-sdk'
 import React from 'react'
 import { Text } from 'rebass'
 import { ButtonPrimary } from '../../components/Button'

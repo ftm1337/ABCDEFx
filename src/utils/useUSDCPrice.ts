@@ -1,4 +1,4 @@
-import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from '@ftm1337/sdk15'
+import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from '@ftm1337/abcdefx-sdk'
 import { useMemo } from 'react'
 import { USDC } from '../constants'
 import { PairState, usePairs } from '../data/Reserves'

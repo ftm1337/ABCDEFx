@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Pair, Token, Trade } from '@ftm1337/sdk15'
+import { Currency, CurrencyAmount, Pair, Token, Trade } from '@ftm1337/abcdefx-sdk'
 import flatMap from 'lodash.flatmap'
 import { useMemo } from 'react'
 

@@ -1,4 +1,4 @@
-import { JSBI, Token } from '@ftm1337/sdk15'
+import { JSBI, Token } from '@ftm1337/abcdefx-sdk'
 import React, { useCallback, useContext, useMemo, useState, useEffect } from 'react'
 import { ThemeContext } from 'styled-components'
 import { AutoColumn } from '../../components/Column'

@@ -1,4 +1,4 @@
-import { ChainId } from '@ftm1337/sdk15'
+import { ChainId } from '@ftm1337/abcdefx-sdk'
 import { createStore, Store } from 'redux'
 import { addTransaction, checkedTransaction, clearAllTransactions, finalizeTransaction } from './actions'
 import reducer, { initialState, TransactionState } from './reducer'

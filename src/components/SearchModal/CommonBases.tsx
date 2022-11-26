@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'rebass'
-import { ChainId, Currency, currencyEquals, ETHER, Token } from '@ftm1337/sdk15'
+import { ChainId, Currency, currencyEquals, ETHER, Token } from '@ftm1337/abcdefx-sdk'
 import styled from 'styled-components'
 
 import { SUGGESTED_BASES } from '../../constants'

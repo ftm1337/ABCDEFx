@@ -1,4 +1,4 @@
-import { Currency, ETHER, JSBI, TokenAmount } from '@ftm1337/sdk15'
+import { Currency, ETHER, JSBI, TokenAmount } from '@ftm1337/abcdefx-sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import { Plus } from 'react-feather'
 import { Text } from 'rebass'

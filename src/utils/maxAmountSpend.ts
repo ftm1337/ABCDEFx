@@ -1,4 +1,4 @@
-import { CurrencyAmount, ETHER, JSBI } from '@ftm1337/sdk15'
+import { CurrencyAmount, ETHER, JSBI } from '@ftm1337/abcdefx-sdk'
 import { MIN_ETH } from '../constants'
 
 /**

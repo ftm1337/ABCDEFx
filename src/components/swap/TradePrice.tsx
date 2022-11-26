@@ -1,5 +1,5 @@
 import React from 'react'
-import { Price } from '@ftm1337/sdk15'
+import { Price } from '@ftm1337/abcdefx-sdk'
 import { useContext } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'

@@ -1,5 +1,5 @@
 import { isAddress } from '../../utils'
-import { Token } from '@ftm1337/sdk15'
+import { Token } from '@ftm1337/abcdefx-sdk'
 
 export function filterTokens(tokens: Token[], search: string): Token[] {
   if (search.length === 0) return tokens

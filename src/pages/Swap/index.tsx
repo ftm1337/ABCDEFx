@@ -1,4 +1,4 @@
-import { CurrencyAmount, JSBI, Token, Trade } from '@ftm1337/sdk15'
+import { CurrencyAmount, JSBI, Token, Trade } from '@ftm1337/abcdefx-sdk'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { ArrowDown } from 'react-feather'
 import ReactGA from 'react-ga'

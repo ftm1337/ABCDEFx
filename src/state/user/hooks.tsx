@@ -1,4 +1,4 @@
-import { ChainId, Pair, Token } from '@ftm1337/sdk15'
+import { ChainId, Pair, Token } from '@ftm1337/abcdefx-sdk'
 import flatMap from 'lodash.flatmap'
 import { useCallback, useMemo } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'

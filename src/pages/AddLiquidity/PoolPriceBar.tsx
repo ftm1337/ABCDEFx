@@ -1,4 +1,4 @@
-import { Currency, Percent, Price } from '@ftm1337/sdk15'
+import { Currency, Percent, Price } from '@ftm1337/abcdefx-sdk'
 import React, { useContext } from 'react'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'

@@ -1,4 +1,4 @@
-import { ChainId, ETHER } from '@ftm1337/sdk15'
+import { ChainId, ETHER } from '@ftm1337/abcdefx-sdk'
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'

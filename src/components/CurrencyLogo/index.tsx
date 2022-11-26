@@ -1,4 +1,4 @@
-import { Currency, ETHER, Token } from '@ftm1337/sdk15'
+import { Currency, ETHER, Token } from '@ftm1337/abcdefx-sdk'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 

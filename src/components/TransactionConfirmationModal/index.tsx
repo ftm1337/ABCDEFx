@@ -1,4 +1,4 @@
-import { ChainId } from '@ftm1337/sdk15'
+import { ChainId } from '@ftm1337/abcdefx-sdk'
 import React, { useContext } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import Modal from '../Modal'

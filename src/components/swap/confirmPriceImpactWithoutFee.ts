@@ -1,4 +1,4 @@
-import { Percent } from '@ftm1337/sdk15'
+import { Percent } from '@ftm1337/abcdefx-sdk'
 import { ALLOWED_PRICE_IMPACT_HIGH, PRICE_IMPACT_WITHOUT_FEE_CONFIRM_MIN } from '../../constants'
 
 /**

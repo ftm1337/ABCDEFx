@@ -1,4 +1,4 @@
-import { JSBI, Pair, Percent } from '@ftm1337/sdk15'
+import { JSBI, Pair, Percent } from '@ftm1337/abcdefx-sdk'
 import { darken } from 'polished'
 import React, { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'react-feather'

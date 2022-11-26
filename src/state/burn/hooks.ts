@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, JSBI, Pair, Percent, TokenAmount } from '@ftm1337/sdk15'
+import { Currency, CurrencyAmount, JSBI, Pair, Percent, TokenAmount } from '@ftm1337/abcdefx-sdk'
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { usePair } from '../../data/Reserves'

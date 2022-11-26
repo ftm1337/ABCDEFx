@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom'
-import { Token, TokenAmount, WETH } from '@ftm1337/sdk15'
+import { Token, TokenAmount, WETH } from '@ftm1337/abcdefx-sdk'
 
 import { Text } from 'rebass'
 import { AutoColumn } from '../Column'

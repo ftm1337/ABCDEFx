@@ -1,4 +1,4 @@
-import { ChainId } from '@ftm1337/sdk15'
+import { ChainId } from '@ftm1337/abcdefx-sdk'
 import MULTICALL_ABI from './abi.json'
 
 const MULTICALL_NETWORKS: { [chainId in ChainId]: string } = {

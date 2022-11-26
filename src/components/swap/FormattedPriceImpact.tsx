@@ -1,4 +1,4 @@
-import { Percent } from '@ftm1337/sdk15'
+import { Percent } from '@ftm1337/abcdefx-sdk'
 import React from 'react'
 import { ONE_BIPS } from '../../constants'
 import { warningSeverity } from '../../utils/prices'

@@ -14,7 +14,7 @@ import {
   Trade,
   TradeType,
   WETH
-} from '@ftm1337/sdk15'
+} from '@ftm1337/abcdefx-sdk'
 import { useMemo } from 'react'
 import { useActiveWeb3React } from '../hooks'
 import { useAllTokens } from '../hooks/Tokens'

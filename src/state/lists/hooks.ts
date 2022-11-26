@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@ftm1337/sdk15'
+import { ChainId, Token } from '@ftm1337/abcdefx-sdk'
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'

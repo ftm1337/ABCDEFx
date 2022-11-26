@@ -1,4 +1,4 @@
-import { Trade, TradeType } from '@ftm1337/sdk15'
+import { Trade, TradeType } from '@ftm1337/abcdefx-sdk'
 import React, { useContext, useMemo, useState } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'

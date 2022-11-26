@@ -1,4 +1,4 @@
-import { Trade, TradeType } from '@ftm1337/sdk15'
+import { Trade, TradeType } from '@ftm1337/abcdefx-sdk'
 import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import { Field } from '../../state/swap/actions'

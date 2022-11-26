@@ -1,4 +1,4 @@
-import { currencyEquals, Trade } from '@ftm1337/sdk15'
+import { currencyEquals, Trade } from '@ftm1337/abcdefx-sdk'
 import React, { useCallback, useMemo } from 'react'
 import TransactionConfirmationModal, {
   ConfirmationModalContent,

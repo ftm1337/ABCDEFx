@@ -1,4 +1,4 @@
-import { Currency } from '@ftm1337/sdk15'
+import { Currency } from '@ftm1337/abcdefx-sdk'
 import React from 'react'
 import styled from 'styled-components'
 import CurrencyLogo from '../CurrencyLogo'

@@ -1,4 +1,4 @@
-import { Currency, currencyEquals, ETHER, WETH } from '@ftm1337/sdk15'
+import { Currency, currencyEquals, ETHER, WETH } from '@ftm1337/abcdefx-sdk'
 import { useMemo } from 'react'
 import { tryParseAmount } from '../state/swap/hooks'
 import { useTransactionAdder } from '../state/transactions/hooks'

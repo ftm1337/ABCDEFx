@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { AddressZero } from '@ethersproject/constants'
-import { TokenAmount, Token, ChainId, Percent, JSBI } from '@ftm1337/sdk15'
+import { TokenAmount, Token, ChainId, Percent, JSBI } from '@ftm1337/abcdefx-sdk'
 
 import {
   getEtherscanLink,

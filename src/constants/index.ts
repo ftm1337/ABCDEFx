@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token, WETH } from '@ftm1337/sdk15'
+import { ChainId, JSBI, Percent, Token, WETH } from '@ftm1337/abcdefx-sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'

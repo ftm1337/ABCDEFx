@@ -1,4 +1,4 @@
-import { TokenAmount, Pair, Currency } from '@ftm1337/sdk15'
+import { TokenAmount, Pair, Currency } from '@ftm1337/abcdefx-sdk'
 import { useMemo } from 'react'
 import { abi as IUniswapV2PairABI } from '@uniswap/v2-core/build/IUniswapV2Pair.json'
 import { Interface } from '@ethersproject/abi'

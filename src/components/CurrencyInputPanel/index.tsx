@@ -1,4 +1,4 @@
-import { Currency, Pair } from '@ftm1337/sdk15'
+import { Currency, Pair } from '@ftm1337/abcdefx-sdk'
 import React, { useState, useContext, useCallback } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import { darken } from 'polished'

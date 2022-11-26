@@ -1,4 +1,4 @@
-import { Currency } from '@ftm1337/sdk15'
+import { Currency } from '@ftm1337/abcdefx-sdk'
 import React, { useCallback, useEffect, useState } from 'react'
 import ReactGA from 'react-ga'
 import useLast from '../../hooks/useLast'

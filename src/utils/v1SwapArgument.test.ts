@@ -1,4 +1,4 @@
-import { CurrencyAmount, ETHER, Percent, Route, TokenAmount, Trade } from '@ftm1337/sdk15'
+import { CurrencyAmount, ETHER, Percent, Route, TokenAmount, Trade } from '@ftm1337/abcdefx-sdk'
 import { DAI, USDC } from '../constants'
 import { MockV1Pair } from '../data/V1'
 import v1SwapArguments from './v1SwapArguments'
