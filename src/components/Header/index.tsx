@@ -14,7 +14,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
 ///import { currencyId } from '../../utils/currencyId'
-import { COIN_symbol, WETH_symbol } from '../utils/coinMeta'
+import { COIN_symbol, WETH_symbol } from '../../utils/coinMeta'
 
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
