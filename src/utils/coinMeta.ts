@@ -22,10 +22,10 @@ const WCOINS: { [chainId in ChainId]: string } = {
   [ChainId.MULTIVAC]:	'WMTV'
 }
 
-export function COIN_symbol(chainId: ChainId): String {
+export function COIN_symbol(chainId: ChainId): string {
   return COINS[chainId]
 }
 
-export function WETH_symbol(chainId: ChainId): String {
+export function WETH_symbol(chainId: ChainId): string {
   return WCOINS[chainId]
 }
