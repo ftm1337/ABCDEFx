@@ -128,11 +128,25 @@ const BalanceText = styled(Text)`
 `
 
 const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
-  [ChainId.MAINNET]: null,
-  [ChainId.RINKEBY]: 'Rinkeby',
-  [ChainId.ROPSTEN]: 'Ropsten',
-  [ChainId.GÖRLI]: 'Görli',
-  [ChainId.KOVAN]: 'Kovan'
+  [ChainId.MAINNET]:	'Ethereum',
+  [ChainId.RINKEBY]:	'Rinkeby',
+  [ChainId.ROPSTEN]:	'Ropsten',
+  [ChainId.GÖRLI]:		'Görli',
+  [ChainId.KOVAN]:		'Kovan',
+  [ChainId.FANTOM]:		'Fantom',
+  [ChainId.ECHELON]:	'Echelon',
+  [ChainId.MULTIVAC]:	'MultiVAC'
+}
+
+const NETWORK_LABELS_COIN: { [chainId in ChainId]: string | null } = {
+  [ChainId.MAINNET]:	'ETH',
+  [ChainId.RINKEBY]:	'ETH',
+  [ChainId.ROPSTEN]:	'ETH',
+  [ChainId.GÖRLI]:		'ETH',
+  [ChainId.KOVAN]:		'ETH',
+  [ChainId.FANTOM]:		'FTM',
+  [ChainId.ECHELON]:	'ECH',
+  [ChainId.MULTIVAC]:	'MTV'
 }
 
 export default function Header() {
@@ -162,7 +176,7 @@ export default function Header() {
             <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
               {account && userEthBalance ? (
                 <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                  {userEthBalance?.toSignificant(4)} {currencyId(ETHER)}
+                  {userEthBalance?.toSignificant(4)} {NETWORK_LABELS_COIN[chainId]}
                 </BalanceText>
               ) : null}
               <Web3Status />

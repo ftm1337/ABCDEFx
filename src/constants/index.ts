@@ -11,24 +11,30 @@ type ChainTokenList = {
 }
 
 export const DAI = new Token(ChainId.ROPSTEN, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18, 'DAI', 'Dai Stablecoin')
-export const USDC = new Token(ChainId.MAINNET, '0xEa1199d50Ee09fA8062fd9dA3D55C6F90C1bABd2', 6, 'USDC', 'Circle USD / RelayChain Bridged')
 export const USDT = new Token(ChainId.ROPSTEN, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD')
 export const COMP = new Token(ChainId.ROPSTEN, '0xc00e94Cb662C3520282E6f5717214004A7f26888', 18, 'COMP', 'Compound')
 export const MKR = new Token(ChainId.ROPSTEN, '0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2', 18, 'MKR', 'Maker')
 export const AMPL = new Token(ChainId.ROPSTEN, '0xD46bA6D942050d489DBd938a2C909A5d5039A161', 9, 'AMPL', 'Ampleforth')
+export const USDC = new Token(ChainId.MULTIVAC, '0xEa1199d50Ee09fA8062fd9dA3D55C6F90C1bABd2', 6, 'USDC', 'Circle USD / RelayChain V1 Bridged')
 
 const WETH_ONLY: ChainTokenList = {
-  [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
-  [ChainId.ROPSTEN]: [WETH[ChainId.ROPSTEN]],
-  [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
-  [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
-  [ChainId.KOVAN]: [WETH[ChainId.KOVAN]]
+  [ChainId.MAINNET]:	[WETH[ChainId.MAINNET]],
+  [ChainId.ROPSTEN]:	[WETH[ChainId.ROPSTEN]],
+  [ChainId.RINKEBY]:	[WETH[ChainId.RINKEBY]],
+  [ChainId.GÖRLI]:		[WETH[ChainId.GÖRLI]],
+  [ChainId.KOVAN]:		[WETH[ChainId.KOVAN]],
+  [ChainId.FANTOM]:		[WETH[ChainId.FANTOM]],
+  [ChainId.ECHELON]:	[WETH[ChainId.ECHELON]],
+  [ChainId.MULTIVAC]:	[WETH[ChainId.MULTIVAC]]
 }
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], USDC]
+  [ChainId.MAINNET]:	[...WETH_ONLY[ChainId.MAINNET]],
+  [ChainId.FANTOM]:		[...WETH_ONLY[ChainId.FANTOM]],
+  [ChainId.ECHELON]:	[...WETH_ONLY[ChainId.ECHELON]],
+  [ChainId.MULTIVAC]:	[...WETH_ONLY[ChainId.MULTIVAC], USDC]
 }
 
 /**
@@ -44,13 +50,15 @@ export const CUSTOM_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: To
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], USDC]
+  [ChainId.MAINNET]:	[...WETH_ONLY[ChainId.MAINNET]],
+  [ChainId.MULTIVAC]:	[...WETH_ONLY[ChainId.MULTIVAC], USDC]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WETH_ONLY,
-  [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], USDC]
+  [ChainId.MAINNET]:	[...WETH_ONLY[ChainId.MAINNET]],
+  [ChainId.MULTIVAC]:	[...WETH_ONLY[ChainId.MULTIVAC], USDC]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -154,7 +162,7 @@ export const BIPS_BASE = JSBI.BigInt(10000)
 export const ALLOWED_PRICE_IMPACT_LOW: Percent = new Percent(JSBI.BigInt(200), BIPS_BASE)
 export const ALLOWED_PRICE_IMPACT_MEDIUM: Percent = new Percent(JSBI.BigInt(500), BIPS_BASE)
 export const ALLOWED_PRICE_IMPACT_HIGH: Percent = new Percent(JSBI.BigInt(1000), BIPS_BASE)
-// if the price slippage exceeds this number, force the user to type 'LFG' to execute
+// if the price slippage exceeds this number, force the user to type 'confirm' to execute
 export const PRICE_IMPACT_WITHOUT_FEE_CONFIRM_MIN: Percent = new Percent(JSBI.BigInt(1337), BIPS_BASE)
 // for non expert mode disable swaps above this
 export const BLOCKED_PRICE_IMPACT_NON_EXPERT: Percent = new Percent(JSBI.BigInt(2500), BIPS_BASE)
