@@ -103,6 +103,8 @@ export default function RemoveLiquidity({
     if (!pairContract || !pair || !library) throw new Error('missing dependencies')
     const liquidityAmount = parsedAmounts[Field.LIQUIDITY]
     if (!liquidityAmount) throw new Error('missing liquidity amount')
+
+    /*
     // try to gather a signature for permission
     const nonce = await pairContract.nonces(account)
 
@@ -161,6 +163,9 @@ export default function RemoveLiquidity({
           approveCallback()
         }
       })
+      */
+    //Direct???
+    approveCallback()
   }
 
   // wrapped onUserInput to clear signatures
