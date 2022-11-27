@@ -137,6 +137,7 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.MULTIVAC]:	'MultiVAC'
 }
 
+/*
 const NETWORK_LABELS_COIN: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]:	'ETH',
   [ChainId.RINKEBY]:	'ETH',
@@ -147,7 +148,7 @@ const NETWORK_LABELS_COIN: { [chainId in ChainId]: string } = {
   [ChainId.ECHELON]:	'ECH',
   [ChainId.MULTIVAC]:	'MTV'
 }
-
+*/
 export default function Header() {
   const { account, chainId } = useActiveWeb3React()
 
