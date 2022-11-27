@@ -45,13 +45,13 @@ export default function useWrapCallback(
             ? async () => {
                 try {
                   const txReceipt = await wethContract.deposit({ value: `0x${inputAmount.raw.toString(16)}` })
-                  addTransaction(txReceipt, { summary: `Wrap ${inputAmount.toSignificant(6)} ${COIN_symbol[chainId]} to ${WETH_symbol[chainId]}` })
+                  addTransaction(txReceipt, { summary: `Wrap ${inputAmount.toSignificant(6)} ${COIN_symbol(chainId)} to ${WETH_symbol(chainId)}` })
                 } catch (error) {
                   console.error('Could not deposit', error)
                 }
               }
             : undefined,
-        inputError: sufficientBalance ? undefined : `Insufficient ${COIN_symbol[chainId]} balance`
+        inputError: sufficientBalance ? undefined : `Insufficient ${COIN_symbol(chainId)} balance`
       }
     } else if (currencyEquals(WETH[chainId], inputCurrency) && outputCurrency === ETHER) {
       return {
@@ -61,7 +61,7 @@ export default function useWrapCallback(
             ? async () => {
                 try {
                   const txReceipt = await wethContract.withdraw(`0x${inputAmount.raw.toString(16)}`)
-                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} ${WETH_symbol[chainId]} to ${COIN_symbol[chainId]}` })
+                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} ${WETH_symbol(chainId)} to ${COIN_symbol(chainId)}` })
                 } catch (error) {
                   console.error('Could not withdraw', error)
                 }
