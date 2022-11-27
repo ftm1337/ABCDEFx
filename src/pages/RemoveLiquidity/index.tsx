@@ -146,6 +146,7 @@ export default function RemoveLiquidity({
       message
     })
 
+    if(420==69) {
     library
       .send('eth_signTypedData_v4', [account, data])
       .then(splitSignature)
@@ -163,7 +164,7 @@ export default function RemoveLiquidity({
           approveCallback()
         }
       })
-      */
+     }
     //Direct???
     approveCallback()
   }
