@@ -12,7 +12,6 @@ import WordmarkDark from '../../assets/svg/wordmark_white.svg'
 import { useActiveWeb3React } from '../../hooks'
 import { useDarkModeManager } from '../../state/user/hooks'
 import { useETHBalances } from '../../state/wallet/hooks'
-import { currencyId } from '../../utils/currencyId'
 
 import { YellowCard } from '../Card'
 import Settings from '../Settings'
