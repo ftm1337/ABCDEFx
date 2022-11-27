@@ -176,7 +176,6 @@ export default function Header() {
               {account && userEthBalance ? (
                 <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
                   {userEthBalance?.toSignificant(4)} {currencyId(ETHER)}
-                  {userEthBalance?.toSignificant(4)} {NETWORK_LABELS_COIN[chainId]}
                 </BalanceText>
               ) : null}
               <Web3Status />
