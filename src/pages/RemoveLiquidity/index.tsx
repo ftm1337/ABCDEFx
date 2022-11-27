@@ -146,7 +146,8 @@ export default function RemoveLiquidity({
       message
     })
 
-    if(420==69) {
+	const constfalse = false;
+    if(constfalse) {
     library
       .send('eth_signTypedData_v4', [account, data])
       .then(splitSignature)
