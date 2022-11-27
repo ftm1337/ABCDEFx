@@ -1,6 +1,6 @@
 import { ChainId } from '@ftm1337/abcdefx-sdk'
 
-const COINS: { [chainId in ChainId]: string | null } = {
+const COINS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]:	'ETH',
   [ChainId.RINKEBY]:	'ETH',
   [ChainId.ROPSTEN]:	'ETH',
@@ -11,7 +11,7 @@ const COINS: { [chainId in ChainId]: string | null } = {
   [ChainId.MULTIVAC]:	'MTV'
 }
 
-const WCOINS: { [chainId in ChainId]: string | null } = {
+const WCOINS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]:	'WETH',
   [ChainId.RINKEBY]:	'WETH',
   [ChainId.ROPSTEN]:	'WETH',
