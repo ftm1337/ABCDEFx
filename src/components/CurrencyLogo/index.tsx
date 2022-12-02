@@ -11,7 +11,7 @@ import Logo from '../Logo'
 
 import { useActiveWeb3React } from '../../hooks'
 
-const getTokenLogoURL = (address: string) =>
+const getTokenLogoURL = (address: string | undefined) =>
   `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
 
 /*
