@@ -38,7 +38,6 @@ function getEthereumLogo(_cid:any) : any {
   if(_cid == 62621) return mtv;
 }
 
-const { chainId } = useActiveWeb3React()
 
 export default function CurrencyLogo({
   currency,
@@ -50,6 +49,8 @@ export default function CurrencyLogo({
   style?: React.CSSProperties
 }) {
   const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined)
+
+  const { chainId } = useActiveWeb3React()
 
   const srcs: string[] = useMemo(() => {
     if (currency === ETHER) return []
