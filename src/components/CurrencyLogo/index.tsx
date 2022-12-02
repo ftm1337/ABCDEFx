@@ -1,11 +1,15 @@
-import { Currency, ETHER, Token } from '@ftm1337/abcdefx-sdk'
+//
+import { Currency, ETHER, Token, WETH } from '@ftm1337/abcdefx-sdk'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
+import { eth, ftm, ech, mtv } from '../../assets/images/coins'
 import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
+
+import { useActiveWeb3React } from '../../hooks'
 
 const getTokenLogoURL = (address: string) =>
   `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
@@ -33,12 +37,17 @@ export default function CurrencyLogo({
 }) {
   const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined)
 
+  const { account, chainId, library } = useActiveWeb3React()
+
   const srcs: string[] = useMemo(() => {
     if (currency === ETHER) return []
 
     if (currency instanceof Token) {
-      if (currency instanceof WrappedTokenInfo) {
+      if (currency instanceof WrappedTokenInfo || currency === ETHER) {
         return [...uriLocations, getTokenLogoURL(currency.address)]
+      }
+      if (currency === ETHER) {
+        return [...uriLocations, getTokenLogoURL(WETH[chainId].address)]
       }
 
       return [getTokenLogoURL(currency.address)]
@@ -46,9 +55,11 @@ export default function CurrencyLogo({
     return []
   }, [currency, uriLocations])
 
+  /*
   if (currency === ETHER) {
     return <StyledEthereumLogo src={EthereumLogo} size={size} style={style} />
   }
+  */
 
   return <StyledLogo size={size} srcs={srcs} alt={`${currency?.symbol ?? 'token'} logo`} style={style} />
 }
