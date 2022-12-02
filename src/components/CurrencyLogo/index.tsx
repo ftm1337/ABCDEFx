@@ -30,11 +30,15 @@ function getEthereumLogo(_cid:any) : any {
   if(_cid == 1) return eth;
   if(_cid == 3) return eth;
   if(_cid == 4) return eth;
+  if(_cid == 5) return eth;
   if(_cid == 42) return eth;
   if(_cid == 250) return ftm;
   if(_cid == 3000) return ech;
   if(_cid == 62621) return mtv;
 }
+
+const { chainId } = useActiveWeb3React()
+
 export default function CurrencyLogo({
   currency,
   size = '24px',
@@ -60,7 +64,6 @@ export default function CurrencyLogo({
   }, [currency, uriLocations])
 
   if (currency === ETHER) {
-    const { chainId } = useActiveWeb3React()
     console.log(chainId+" is the ChainId for COIN.logo");
     return <StyledEthereumLogo src={getEthereumLogo(chainId)} size={size} style={style} />
   }
