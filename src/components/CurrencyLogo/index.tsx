@@ -11,7 +11,7 @@ import Logo from '../Logo'
 
 import { useActiveWeb3React } from '../../hooks'
 
-const getTokenLogoURL = (address: string | undefined) =>
+const getTokenLogoURL = (address: string) =>
   `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
 
 /*
@@ -48,7 +48,7 @@ export default function CurrencyLogo({
       if (currency instanceof WrappedTokenInfo || currency === ETHER) {
         return [...uriLocations, getTokenLogoURL(currency.address)]
       }
-      if (currency === ETHER) {
+      if (currency === ETHER && chainId) {
         return [...uriLocations, getTokenLogoURL(WETH[chainId].address)]
       }
 
