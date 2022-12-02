@@ -115,7 +115,7 @@ export default function Pool() {
 
       <div style={{ display: 'flex', alignItems: 'center', marginTop: '1.5rem' }}>
         <ButtonSecondary as={Link} style={{ width: 'initial' }} to='/pool'>
-          Trade Fee generates Protocol-Owned Liquidity.<br>Stake your LP tokens to earn further yield!
+          Trade Fee generates Protocol-Owned Liquidity.<br />Stake your LP tokens to earn further yield!
         </ButtonSecondary>
       </div>
     </>
