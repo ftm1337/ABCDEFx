@@ -43,7 +43,7 @@ import { useWalletModalToggle } from '../../state/application/hooks'
 import { useUserDeadline, useUserSlippageTolerance } from '../../state/user/hooks'
 import { BigNumber } from '@ethersproject/bignumber'
 
-import { COIN_symbol, WETH_symbol } from '../utils/coinMeta'
+import { COIN_symbol, WETH_symbol } from '../../utils/coinMeta'
 
 export default function RemoveLiquidity({
   history,
