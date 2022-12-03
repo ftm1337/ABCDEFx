@@ -124,7 +124,7 @@ export default function RemoveLiquidity({
         'ABcDeFx Liquidity Position: '
         + currencyIdA
         + ' paired with '
-        + currencyIdB
+        + currencyIdB,
       version: '1',
       chainId: chainId,
       verifyingContract: pair.liquidityToken.address
