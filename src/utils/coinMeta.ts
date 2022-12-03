@@ -26,10 +26,14 @@ export function COIN_symbol_null(chainId: ChainId | undefined ): string {
   return chainId?COINS[chainId]:"???"
 }
 
-export function COIN_symbol(chainId: ChainId): string {
-  return COINS[chainId]
+export function COIN_symbol(chainId: any): string {
+  if chainId {
+    return COINS[chainId]
+  }
 }
 
-export function WETH_symbol(chainId: ChainId): string {
-  return WCOINS[chainId]
+export function WETH_symbol(chainId: any): string {
+  if chainId {
+    return WCOINS[chainId]
+  }
 }
