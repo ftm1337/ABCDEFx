@@ -104,6 +104,7 @@ export function useToken(tokenAddress?: string): Token | undefined | null {
 }
 
 export function useCurrency(currencyId: string | undefined): Currency | null | undefined {
+  const { chainId } = useActiveWeb3React()
   const isETH = currencyId?.toUpperCase() === COIN_symbol(chainId)
   const token = useToken(isETH ? undefined : currencyId)
   return isETH ? ETHER : token
