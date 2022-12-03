@@ -27,13 +27,13 @@ export function COIN_symbol_null(chainId: ChainId | undefined ): string {
 }
 
 export function COIN_symbol(chainId: any): string {
-  if chainId {
+  if(chainId && chainId) {
     return COINS[chainId]
   }
 }
 
 export function WETH_symbol(chainId: any): string {
-  if chainId {
+  if(chainId && chainId) {
     return WCOINS[chainId]
   }
 }
