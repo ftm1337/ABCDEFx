@@ -44,7 +44,6 @@ import { useUserDeadline, useUserSlippageTolerance } from '../../state/user/hook
 import { BigNumber } from '@ethersproject/bignumber'
 
 import { COIN_symbol, WETH_symbol } from '../../utils/coinMeta'
-import { useToken } from '../../hooks/Tokens'
 
 export default function RemoveLiquidity({
   history,
@@ -120,14 +119,8 @@ export default function RemoveLiquidity({
       { name: 'chainId', type: 'uint256' },
       { name: 'verifyingContract', type: 'address' }
     ]
-    const useToken_currencyIdA = useToken(currencyIdA)
-    const useToken_currencyIdB = useToken(currencyIdB)
     const domain = {
-      name:
-        'ABcDeFx Liquidity Position: '
-        + useToken_currencyIdA
-        + ' paired with '
-        + useToken_currencyIdB,
+      name: 'ABcDeFx Liquidity Position',
       version: '1',
       chainId: chainId,
       verifyingContract: pair.liquidityToken.address
