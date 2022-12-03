@@ -1,3 +1,4 @@
+//
 import { splitSignature } from '@ethersproject/bytes'
 import { Contract } from '@ethersproject/contracts'
 import { TransactionResponse } from '@ethersproject/providers'
@@ -41,6 +42,8 @@ import { Field } from '../../state/burn/actions'
 import { useWalletModalToggle } from '../../state/application/hooks'
 import { useUserDeadline, useUserSlippageTolerance } from '../../state/user/hooks'
 import { BigNumber } from '@ethersproject/bignumber'
+
+import { COIN_symbol, WETH_symbol } from '../utils/coinMeta'
 
 export default function RemoveLiquidity({
   history,
@@ -117,7 +120,7 @@ export default function RemoveLiquidity({
       { name: 'verifyingContract', type: 'address' }
     ]
     const domain = {
-      name: null,
+      name: 'ABcDeFx Liquidity Position',
       version: '1',
       chainId: chainId,
       verifyingContract: pair.liquidityToken.address
@@ -146,6 +149,26 @@ export default function RemoveLiquidity({
       message
     })
 
+    library
+      .send('eth_signTypedData_v4', [account, data])
+      .then(splitSignature)
+      .then(signature => {
+        setSignatureData({
+          v: signature.v,
+          r: signature.r,
+          s: signature.s,
+          deadline: deadlineForSignature
+        })
+      })
+      .catch(error => {
+        // for all errors other than 4001 (EIP-1193 user rejected request), fall back to manual approve
+        if (error?.code !== 4001) {
+          approveCallback()
+        }
+      })
+
+	/*
+	hack to override permit/eip2612 with raw approvals
 	const constfalse = false;
     if(constfalse) {
     library
@@ -168,6 +191,7 @@ export default function RemoveLiquidity({
      }
     //Direct???
     approveCallback()
+    */
   }
 
   // wrapped onUserInput to clear signatures
@@ -381,7 +405,7 @@ export default function RemoveLiquidity({
       <>
         <RowBetween>
           <Text color={theme.text2} fontWeight={500} fontSize={16}>
-            {'UNI ' + currencyA?.symbol + '/' + currencyB?.symbol} Burned
+            {'LPT of ' + currencyA?.symbol + '/' + currencyB?.symbol} Burned
           </Text>
           <RowFixed>
             <DoubleCurrencyLogo currency0={currencyA} currency1={currencyB} margin={true} />
@@ -568,15 +592,15 @@ export default function RemoveLiquidity({
                               currencyB === ETHER ? WETH[chainId].address : currencyIdB
                             }`}
                           >
-                            Receive WMTV
+                            Receive {WETH_symbol(chainId)}
                           </StyledInternalLink>
                         ) : oneCurrencyIsWETH ? (
                           <StyledInternalLink
                             to={`/remove/${
-                              currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'MTV' : currencyIdA
-                            }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'MTV' : currencyIdB}`}
+                              currencyA && currencyEquals(currencyA, WETH[chainId]) ? COIN_symbol(chainId) : currencyIdA
+                            }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? COIN_symbol(chainId) : currencyIdB}`}
                           >
-                            Receive MTV
+                            Receive {COIN_symbol(chainId)}
                           </StyledInternalLink>
                         ) : null}
                       </RowBetween>

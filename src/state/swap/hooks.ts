@@ -18,6 +18,7 @@ import { SwapState } from './reducer'
 import useToggledVersion from '../../hooks/useToggledVersion'
 import { useUserSlippageTolerance } from '../user/hooks'
 import { computeSlippageAdjustedAmounts } from '../../utils/prices'
+import { COIN_symbol, WETH_symbol } from '../utils/coinMeta'
 
 export function useSwapState(): AppState['swap'] {
   return useSelector<AppState, AppState['swap']>(state => state.swap)
@@ -30,12 +31,13 @@ export function useSwapActionHandlers(): {
   onChangeRecipient: (recipient: string | null) => void
 } {
   const dispatch = useDispatch<AppDispatch>()
+  const { chainId } = useActiveWeb3React()
   const onCurrencySelection = useCallback(
     (field: Field, currency: Currency) => {
       dispatch(
         selectCurrency({
           field,
-          currencyId: currency instanceof Token ? currency.address : currency === ETHER ? 'MTV' : ''
+          currencyId: currency instanceof Token ? currency.address : currency === ETHER ? COIN_symbol(chainId) : ''
         })
       )
     },
@@ -220,11 +222,12 @@ export function useDerivedSwapInfo(): {
 function parseCurrencyFromURLParameter(urlParam: any): string {
   if (typeof urlParam === 'string') {
     const valid = isAddress(urlParam)
+    const { chainId } = useActiveWeb3React()
     if (valid) return valid
-    if (urlParam.toUpperCase() === 'MTV') return 'MTV'
-    if (valid === false) return 'MTV'
+    if (urlParam.toUpperCase() === COIN_symbol(chainId)) return COIN_symbol(chainId)
+    if (valid === false) return COIN_symbol(chainId)
   }
-  return 'MTV' ?? ''
+  return COIN_symbol(chainId) ?? ''
 }
 
 function parseTokenAmountURLParameter(urlParam: any): string {
