@@ -1,3 +1,4 @@
+//
 import React from 'react'
 import { Text } from 'rebass'
 import { ChainId, Currency, currencyEquals, ETHER, Token } from '@ftm1337/abcdefx-sdk'
@@ -9,7 +10,7 @@ import QuestionHelper from '../QuestionHelper'
 import { AutoRow } from '../Row'
 import CurrencyLogo from '../CurrencyLogo'
 
-import { COIN_symbol } from '../utils/coinMeta'
+import { COIN_symbol } from '../../utils/coinMeta'
 
 const BaseWrapper = styled.div<{ disable?: boolean }>`
   border: 1px solid ${({ theme, disable }) => (disable ? 'transparent' : theme.bg3)};
