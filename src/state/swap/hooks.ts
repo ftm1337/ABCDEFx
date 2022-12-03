@@ -219,10 +219,11 @@ export function useDerivedSwapInfo(): {
   }
 }
 
+const { chainId } = useActiveWeb3React()
+
 function parseCurrencyFromURLParameter(urlParam: any): string {
   if (typeof urlParam === 'string') {
     const valid = isAddress(urlParam)
-    const { chainId } = useActiveWeb3React()
     if (valid) return valid
     if (urlParam.toUpperCase() === COIN_symbol(chainId)) return COIN_symbol(chainId)
     if (valid === false) return COIN_symbol(chainId)
