@@ -120,7 +120,11 @@ export default function RemoveLiquidity({
       { name: 'verifyingContract', type: 'address' }
     ]
     const domain = {
-      name: 'ABcDeFx Liquidity Position',
+      name:
+        'ABcDeFx Liquidity Position: '
+        + currencyIdA
+        + ' paired with '
+        + currencyIdB
       version: '1',
       chainId: chainId,
       verifyingContract: pair.liquidityToken.address
