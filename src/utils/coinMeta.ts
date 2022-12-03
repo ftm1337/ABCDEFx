@@ -22,17 +22,17 @@ const WCOINS: { [chainId in ChainId]: string } = {
   [ChainId.MULTIVAC]:	'WMTV'
 }
 
-export function COIN_symbol_null(chainId: ChainId | undefined ): string | undefined {
+export function COIN_symbol_null(chainId: ChainId | undefined ): string {
   return chainId?COINS[chainId]:"???"
 }
 
-export function COIN_symbol(chainId: any): string | undefined {
+export function COIN_symbol(chainId: any): any {
   if(chainId && chainId) {
     return COINS[chainId]
   }
 }
 
-export function WETH_symbol(chainId: any): string | undefined {
+export function WETH_symbol(chainId: any): any {
   if(chainId && chainId) {
     return WCOINS[chainId]
   }
