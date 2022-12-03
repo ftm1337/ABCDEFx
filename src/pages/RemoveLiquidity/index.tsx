@@ -44,6 +44,7 @@ import { useUserDeadline, useUserSlippageTolerance } from '../../state/user/hook
 import { BigNumber } from '@ethersproject/bignumber'
 
 import { COIN_symbol, WETH_symbol } from '../../utils/coinMeta'
+import { useToken } from '../../hooks/Tokens'
 
 export default function RemoveLiquidity({
   history,
