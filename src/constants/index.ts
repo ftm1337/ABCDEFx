@@ -22,19 +22,31 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.ROPSTEN]:	[WETH[ChainId.ROPSTEN]],
   [ChainId.RINKEBY]:	[WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]:		[WETH[ChainId.GÖRLI]],
+  [ChainId.CRONOS]:		[WETH[ChainId.CRONOS]],
   [ChainId.KOVAN]:		[WETH[ChainId.KOVAN]],
+  [ChainId.BSC]:		[WETH[ChainId.BSC]],
+  [ChainId.XDAI]:		[WETH[ChainId.XDAI]],
+  [ChainId.MATIC]:		[WETH[ChainId.MATIC]],
   [ChainId.FANTOM]:		[WETH[ChainId.FANTOM]],
+  [ChainId.KCC]:		[WETH[ChainId.KCC]],
   [ChainId.ECHELON]:	[WETH[ChainId.ECHELON]],
-  [ChainId.MULTIVAC]:	[WETH[ChainId.MULTIVAC]]
+  [ChainId.MULTIVAC]:	[WETH[ChainId.MULTIVAC]],
+  [ChainId.AVALANCHE]:	[WETH[ChainId.AVALANCHE]]
 }
 
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]:	[...WETH_ONLY[ChainId.MAINNET]],
+  [ChainId.CRONOS]:		[...WETH_ONLY[ChainId.CRONOS]],
+  [ChainId.BSC]:		[...WETH_ONLY[ChainId.BSC]],
+  [ChainId.XDAI]:		[...WETH_ONLY[ChainId.XDAI]],
+  [ChainId.MATIC]:		[...WETH_ONLY[ChainId.MATIC]],
   [ChainId.FANTOM]:		[...WETH_ONLY[ChainId.FANTOM]],
+  [ChainId.KCC]:		[...WETH_ONLY[ChainId.KCC]],
   [ChainId.ECHELON]:	[...WETH_ONLY[ChainId.ECHELON]],
-  [ChainId.MULTIVAC]:	[...WETH_ONLY[ChainId.MULTIVAC], USDC]
+  [ChainId.MULTIVAC]:	[...WETH_ONLY[ChainId.MULTIVAC], USDC],
+  [ChainId.AVALANCHE]:	[...WETH_ONLY[ChainId.AVALANCHE]]
 }
 
 /**

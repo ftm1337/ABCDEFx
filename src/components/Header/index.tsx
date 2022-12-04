@@ -134,13 +134,19 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.RINKEBY]:	'Rinkeby',
   [ChainId.ROPSTEN]:	'Ropsten',
   [ChainId.GÖRLI]:		'Görli',
+  [ChainId.CRONOS]:		'Cronos',
   [ChainId.KOVAN]:		'Kovan',
+  [ChainId.BSC]:		'B.S.C.',
+  [ChainId.XDAI]:		'Gnosis',
+  [ChainId.MATIC]:		'Polygon',
   [ChainId.FANTOM]:		'Fantom',
+  [ChainId.KCC]:		'K.C.C.',
   [ChainId.ECHELON]:	'Echelon',
-  [ChainId.MULTIVAC]:	'MultiVAC'
+  [ChainId.MULTIVAC]:	'MultiVAC',
+  [ChainId.AVALANCHE]:	'Avalanche'
 }
 
-/*
+/****************************************************************
 const NETWORK_LABELS_COIN: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]:	'ETH',
   [ChainId.RINKEBY]:	'ETH',
@@ -151,7 +157,7 @@ const NETWORK_LABELS_COIN: { [chainId in ChainId]: string } = {
   [ChainId.ECHELON]:	'ECH',
   [ChainId.MULTIVAC]:	'MTV'
 }
-*/
+*****************************************************************/
 export default function Header() {
   const { account, chainId } = useActiveWeb3React()
 
