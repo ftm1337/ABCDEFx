@@ -19,14 +19,8 @@ import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
 import { useActiveWeb3React } from '../../hooks'
 
-/*
-const getTokenLogoURL = (address: string) =>
-  `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/${address}/logo.png`
-*/
-function getTokenLogoURL(address: string) : any {
-  const { chainId } = useActiveWeb3React()
-  return `https://ftm.guru/tokenlists/icons/${chainId}/${address}.png`
-}
+const getTokenLogoURL = (_cid:any, address: string) =>
+  `https://ftm.guru/tokenlists/icons/${_cid}/${address}.png`
 
 const StyledEthereumLogo = styled.img<{ size: string }>`
   width: ${({ size }) => size};
@@ -75,10 +69,10 @@ export default function CurrencyLogo({
 
     if (currency instanceof Token) {
       if (currency instanceof WrappedTokenInfo) {
-        return [...uriLocations, getTokenLogoURL(currency.address)]
+        return [...uriLocations, getTokenLogoURL(chainId, currency.address)]
       }
 
-      return [getTokenLogoURL(currency.address)]
+      return [getTokenLogoURL(chainId, currency.address)]
     }
     return []
   }, [currency, uriLocations])
