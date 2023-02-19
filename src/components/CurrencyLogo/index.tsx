@@ -12,8 +12,9 @@ import matic from '../../assets/images/coins/matic.svg'
 import ftm from '../../assets/images/coins/ftm.svg'
 import kcs from '../../assets/images/coins/kcs.svg'
 import ech from '../../assets/images/coins/ech.svg'
-import avax from '../../assets/images/coins/avax.svg'
 import mtv from '../../assets/images/coins/mtv.png'
+import kava from '../../assets/images/coins/kava.svg'
+import avax from '../../assets/images/coins/avax.svg'
 import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
@@ -46,8 +47,9 @@ function getEthereumLogo(_cid:any) : any {
   if(_cid == 250) return ftm;
   if(_cid == 321) return kcs;
   if(_cid == 3000) return ech;
-  if(_cid == 43114) return avax;
   if(_cid == 62621) return mtv;
+  if(_cid == 2222) return kava;
+  if(_cid == 43114) return avax;
 }
 
 

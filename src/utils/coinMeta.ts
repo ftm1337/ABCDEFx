@@ -14,6 +14,7 @@ const COINS: { [chainId in ChainId]: string } = {
   [ChainId.KCC]:		'KCS',
   [ChainId.ECHELON]:	'ECH',
   [ChainId.MULTIVAC]:	'MTV',
+  [ChainId.KAVA]:		'KAVA',
   [ChainId.AVALANCHE]:	'AVAX'
 }
 
@@ -31,6 +32,7 @@ const WCOINS: { [chainId in ChainId]: string } = {
   [ChainId.KCC]:		'WKCS',
   [ChainId.ECHELON]:	'WECH',
   [ChainId.MULTIVAC]:	'WMTV',
+  [ChainId.KAVA]:		'WKAVA',
   [ChainId.AVALANCHE]:	'WAVAX'
 }
 

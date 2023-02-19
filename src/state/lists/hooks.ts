@@ -45,6 +45,7 @@ const EMPTY_LIST: TokenAddressMap = {
   [ChainId.KCC]: {},
   [ChainId.ECHELON]: {},
   [ChainId.MULTIVAC]: {},
+  [ChainId.KAVA]: {},
   [ChainId.AVALANCHE]: {}
 }
 

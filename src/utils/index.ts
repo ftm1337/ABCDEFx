@@ -31,6 +31,7 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   321: 'scan.kcc.io',
   3000: 'app.ech.network/explorer',
   62621: 'mtvscout.com',
+  2222: 'explorer.kava.io',
   43114: 'snowtrace.io'
 }
 

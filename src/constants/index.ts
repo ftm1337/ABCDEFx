@@ -31,6 +31,7 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.KCC]:		[WETH[ChainId.KCC]],
   [ChainId.ECHELON]:	[WETH[ChainId.ECHELON]],
   [ChainId.MULTIVAC]:	[WETH[ChainId.MULTIVAC]],
+  [ChainId.KAVA]:		[WETH[ChainId.KAVA]],
   [ChainId.AVALANCHE]:	[WETH[ChainId.AVALANCHE]]
 }
 
@@ -46,6 +47,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.KCC]:		[...WETH_ONLY[ChainId.KCC]],
   [ChainId.ECHELON]:	[...WETH_ONLY[ChainId.ECHELON]],
   [ChainId.MULTIVAC]:	[...WETH_ONLY[ChainId.MULTIVAC], USDC],
+  [ChainId.KAVA]:		[...WETH_ONLY[ChainId.KAVA]],
   [ChainId.AVALANCHE]:	[...WETH_ONLY[ChainId.AVALANCHE]]
 }
 

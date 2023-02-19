@@ -143,6 +143,7 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.KCC]:		'K.C.C.',
   [ChainId.ECHELON]:	'Echelon',
   [ChainId.MULTIVAC]:	'MultiVAC',
+  [ChainId.KAVA]:		'Kava EVM',
   [ChainId.AVALANCHE]:	'Avalanche'
 }
 
@@ -155,7 +156,9 @@ const NETWORK_LABELS_COIN: { [chainId in ChainId]: string } = {
   [ChainId.KOVAN]:		'ETH',
   [ChainId.FANTOM]:		'FTM',
   [ChainId.ECHELON]:	'ECH',
-  [ChainId.MULTIVAC]:	'MTV'
+  [ChainId.MULTIVAC]:	'MTV',
+  [ChainId.KAVA]:		'KAVA',
+  [ChainId.AVALANCHE]:	'AVAX'
 }
 *****************************************************************/
 export default function Header() {
