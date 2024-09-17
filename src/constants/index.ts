@@ -32,7 +32,8 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.ECHELON]:	[WETH[ChainId.ECHELON]],
   [ChainId.MULTIVAC]:	[WETH[ChainId.MULTIVAC]],
   [ChainId.KAVA]:		[WETH[ChainId.KAVA]],
-  [ChainId.AVALANCHE]:	[WETH[ChainId.AVALANCHE]]
+  [ChainId.AVALANCHE]:	[WETH[ChainId.AVALANCHE]],
+  [ChainId.TEST_SONIC]:	[WETH[ChainId.TEST_SONIC]]
 }
 
 // used to construct intermediary pairs for trading
@@ -48,7 +49,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.ECHELON]:	[...WETH_ONLY[ChainId.ECHELON]],
   [ChainId.MULTIVAC]:	[...WETH_ONLY[ChainId.MULTIVAC], USDC],
   [ChainId.KAVA]:		[...WETH_ONLY[ChainId.KAVA]],
-  [ChainId.AVALANCHE]:	[...WETH_ONLY[ChainId.AVALANCHE]]
+  [ChainId.AVALANCHE]:	[...WETH_ONLY[ChainId.AVALANCHE]],
+  [ChainId.TEST_SONIC]:	[...WETH_ONLY[ChainId.TEST_SONIC]]
 }
 
 /**

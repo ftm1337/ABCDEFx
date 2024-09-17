@@ -15,6 +15,8 @@ import ech from '../../assets/images/coins/ech.svg'
 import mtv from '../../assets/images/coins/mtv.png'
 import kava from '../../assets/images/coins/kava.svg'
 import avax from '../../assets/images/coins/avax.svg'
+import sonic from '../../assets/images/coins/sonic.png'
+
 import useHttpLocations from '../../hooks/useHttpLocations'
 import { WrappedTokenInfo } from '../../state/lists/hooks'
 import Logo from '../Logo'
@@ -50,6 +52,7 @@ function getEthereumLogo(_cid:any) : any {
   if(_cid == 62621) return mtv;
   if(_cid == 2222) return kava;
   if(_cid == 43114) return avax;
+  if(_cid == 64165) return sonic;
 }
 
 

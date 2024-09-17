@@ -15,7 +15,8 @@ const COINS: { [chainId in ChainId]: string } = {
   [ChainId.ECHELON]:	'ECH',
   [ChainId.MULTIVAC]:	'MTV',
   [ChainId.KAVA]:		'KAVA',
-  [ChainId.AVALANCHE]:	'AVAX'
+  [ChainId.AVALANCHE]:	'AVAX',
+  [ChainId.TEST_SONIC]:	'tS'
 }
 
 const WCOINS: { [chainId in ChainId]: string } = {
@@ -33,7 +34,8 @@ const WCOINS: { [chainId in ChainId]: string } = {
   [ChainId.ECHELON]:	'WECH',
   [ChainId.MULTIVAC]:	'WMTV',
   [ChainId.KAVA]:		'WKAVA',
-  [ChainId.AVALANCHE]:	'WAVAX'
+  [ChainId.AVALANCHE]:	'WAVAX',
+  [ChainId.TEST_SONIC]:	'WtS'
 }
 
 export function COIN_symbol_null(chainId: ChainId | undefined ): string {

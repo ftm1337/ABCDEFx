@@ -144,7 +144,8 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.ECHELON]:	'Echelon',
   [ChainId.MULTIVAC]:	'MultiVAC',
   [ChainId.KAVA]:		'Kava EVM',
-  [ChainId.AVALANCHE]:	'Avalanche'
+  [ChainId.AVALANCHE]:	'Avalanche',
+  [ChainId.TEST_SONIC]:	'Sonic Testnet'
 }
 
 /****************************************************************
