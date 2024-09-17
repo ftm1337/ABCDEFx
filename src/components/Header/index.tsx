@@ -159,7 +159,8 @@ const NETWORK_LABELS_COIN: { [chainId in ChainId]: string } = {
   [ChainId.ECHELON]:	'ECH',
   [ChainId.MULTIVAC]:	'MTV',
   [ChainId.KAVA]:		'KAVA',
-  [ChainId.AVALANCHE]:	'AVAX'
+  [ChainId.AVALANCHE]:	'AVAX',
+  [ChainId.TEST_SONIC]:	'tS'
 }
 *****************************************************************/
 export default function Header() {
